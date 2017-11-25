@@ -26,6 +26,7 @@ const Demo = ({ title, desc, url, images, onClick }) => (
           <span>{img.desc}</span>
         </div>
       ))}
+      <i className="exit bot" onClick={() => onClick(undefined)} />
     </div>
   </div>
 );

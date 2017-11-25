@@ -281,6 +281,11 @@ h3 {
     position: relative;
     float: right;
     vertical-align: bottom;
+    &.bot {
+      float: none;
+      display: block;
+      margin: 50px auto;
+    }
     &:after, &:before {
       content: '';
       display: block;

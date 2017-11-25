@@ -5,7 +5,7 @@ import cup from "../static/cup.svg";
 
 export default ({ isSuspended, plateARef, plateBRef, cupRef, hidden }) => {
   return (
-    <div className={`coffee ${isSuspended && "suspended"} ${hidden && 'hide'}`}>
+    <div className={`coffee ${isSuspended && "suspended"} ${hidden && "hide"}`}>
       <Fume />
       <img className="shadow" />
       <img className="plate-b" src={plateB} ref={plateARef} />
