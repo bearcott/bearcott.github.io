@@ -41,13 +41,17 @@ export default class App extends React.Component {
     this.state = {
       scrollPos: POS.HEADER,
       isCupSuspended: false,
-      selectedPiece: undefined
+      selectedPiece: undefined,
+      isMobile: false
     };
   }
   componentDidMount() {
     polyfill();
     this.onScroll();
     window.addEventListener("scroll", this.onScroll);
+    if (window.innerWidth < 1000) {
+      this.setState({ isMobile: true });
+    }
   }
   componentWillUpdate(nextProps, nextState) {
     //hardcode the window to not scroll
@@ -156,6 +160,7 @@ export default class App extends React.Component {
             selectedPiece={this.state.selectedPiece}
             onClick={piece => this.setState({ selectedPiece: piece })}
             isPast={POSNUM[this.state.scrollPos] > POSNUM[POS.PORTFOLIO]}
+            isMobile={this.state.isMobile}
           />
           <Footer containerRef={x => (this.footer = x)} />
         </div>

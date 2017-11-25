@@ -30,7 +30,14 @@ const Demo = ({ title, desc, url, images, onClick }) => (
   </div>
 );
 
-export default ({ containerRef, snapped, isPast, onClick, selectedPiece }) => {
+export default ({
+  containerRef,
+  snapped,
+  isPast,
+  onClick,
+  selectedPiece,
+  isMobile
+}) => {
   return (
     <div id="portfolio" className="portfolio" ref={containerRef}>
       <div
@@ -41,18 +48,26 @@ export default ({ containerRef, snapped, isPast, onClick, selectedPiece }) => {
       </div>
       <div className={`right ${selectedPiece >= 0 && "faded"}`}>
         <div className="spacer" />
-
         {works.map((work, i) => (
           <div className="piece" key={i} onClick={() => onClick(i)}>
             <div className="bg">
-              <video
-                src={work.video}
-                onMouseEnter={e => e.target.play()}
-                onMouseLeave={e => {
-                  e.target.pause();
-                  e.target.currentTime = 0;
-                }}
-              />
+              {isMobile ? (
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${work.images[0] && work.images[0].src})`
+                  }}
+                />
+              ) : (
+                <video
+                  src={work.video}
+                  onMouseEnter={e => e.target.play()}
+                  onMouseLeave={e => {
+                    e.target.pause();
+                    e.target.currentTime = 0;
+                  }}
+                />
+              )}
             </div>
           </div>
         ))}

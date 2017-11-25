@@ -258,7 +258,7 @@ h3 {
   >.right {
     width: calc(100% - 600px);
     float: right;
-    margin-right: 50px;
+    margin-right: 150px;
     .spacer {
       width: 200px;
       height: 200px;
@@ -343,18 +343,22 @@ h3 {
   }
   &:hover {
     cursor: pointer;
-    video {
+    video, .mg {
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
   }
   .bg {
-    video {
-      width: 100%;
+    video, .img {
       background: #eee;
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       transition: $ez-transition;
+    }
+    .img {
+      min-height: 300px;
+      background-size: cover;
+      background-position: top center;
     }
   }
 }
