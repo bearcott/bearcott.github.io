@@ -4,7 +4,7 @@ var loaders = require("./webpack.loaders");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var WebpackCleanupPlugin = require("webpack-cleanup-plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var htmlConfig = require("webpack.html-config");
+var htmlConfig = require("./webpack.html-config");
 
 loaders.push({
   test: /\.scss$/,
