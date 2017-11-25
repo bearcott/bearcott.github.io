@@ -4,7 +4,7 @@
   "description": "bearcott",
   "main": "''",
   "scripts": {
-    "build": "webpack --config webpack.production.config.js --progress --profile --colors; cp CNAME publlic",
+    "build": "webpack --config webpack.production.config.js --progress --profile --colors; cp CNAME public",
     "dev": "webpack-dev-server --progress --profile --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "start": " webpack-dashboard -- webpack-dev-server"
