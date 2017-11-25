@@ -19,7 +19,7 @@ loaders.push({
 module.exports = {
   entry: ["./src/index.jsx", "./src/styles/index.scss"],
   output: {
-    publicPath: "./",
+    publicPath: "./static/",
     path: path.join(__dirname, "public"),
     filename: "[chunkhash].js"
   },
@@ -30,7 +30,7 @@ module.exports = {
     loaders
   },
   plugins: [
-    new WebpackCleanupPlugin(),
+    new WebpackCleanupPlugin({ exclude: [".git/*"] }),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: '"production"'
