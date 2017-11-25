@@ -5,6 +5,7 @@ var loaders = require("./webpack.loaders");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var DashboardPlugin = require("webpack-dashboard/plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var htmlConfig = require("webpack.html-config");
 
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || "8888";
@@ -55,12 +56,7 @@ module.exports = {
     }),
     new DashboardPlugin(),
     new HtmlWebpackPlugin({
-      title: "Portfolio of Benny Yan",
-      url: "http://bearcott.com/",
-      desc:
-        "Hi! I'm Benny Yan, a full-stack developer focused on intuitive UX.",
-      favicon: "./src/static/favicon.png",
-      url: "http://bearcott.com/",
+      ...htmlConfig,
       template: "./src/template.html",
       files: {
         css: ["style.css"],
