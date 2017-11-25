@@ -95,7 +95,7 @@ const WORKS = {
     ]
   },
   hdfw: {
-    title: "Hackdfw",
+    title: "HackDFW",
     desc: `I've been with HackDFW ever since its inception when me and 2 other UTD students wanted
     to create a hackathon for the DFW area. It has been a blast through all the experiences I've had
     with them. This was the last homepage I designed for them before I became too busy with studies
@@ -142,17 +142,18 @@ const WORKS = {
     ]
   },
   eboogaloo: {
-    title: "electric boogaloo - HackPrinceton Fall 2016",
+    title: "electric boogaloo HackPrinceton Fall 2016",
     desc: `This was probably one of my best hackathon experiences. It was a cold fall- me and my friend
     Cyrus arrived at the hackathon without any clue of what to do. After spending about half of our 32 hours
     to hack, we came up with some idea involving this monstrosity. He churned out the hardware while I churned out
-    the frontend in the few hours we had left. Somehow managed to win best overall, best hardware, and best design!`,
+    the frontend in the few hours we had left. Somehow managed to win best overall, best hardware, and best design!
+    Cyrus wrote a good blog post about it, check it out!`,
     video: eboogaloo,
-    url: `https://devpost.com/software/electric-boogaloo-6vuwx0`,
+    url: `https://blog.cyrusroshan.com/2016/11/15/hackprinceton-part-2-electric-boogaloo.html`,
     images: [
       {
         src: eboogaloo1,
-        desc: "the UI, nothing special"
+        desc: "the UI, banjo made of divs, but nothing too fancy"
       },
       {
         src: eboogaloo2,
