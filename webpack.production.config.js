@@ -19,7 +19,7 @@ loaders.push({
 module.exports = {
   entry: ["./src/index.jsx", "./src/styles/index.scss"],
   output: {
-    publicPath: "./static/",
+    publicPath: "./",
     path: path.join(__dirname, "public"),
     filename: "[chunkhash].js"
   },
