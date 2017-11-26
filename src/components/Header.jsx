@@ -13,7 +13,7 @@ export default ({ titleRef, onContactClick }) => {
           {spanify("Hi! I'm")}
           <span className="special">Benny Yan</span>
           {spanify(`, a full-stack developer focused on intuitive
-          UX. Currently I'm working on making data visualization with React.`)}
+          UX. Currently I'm working on making data visualizations with React.`)}
           <br/>
           <span className="link" onClick={onContactClick}>
             Let's get acquainted.
