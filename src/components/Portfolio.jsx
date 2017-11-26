@@ -22,7 +22,7 @@ const Demo = ({ title, desc, url, images, onClick }) => (
       </p>
       {images.map((img, i) => (
         <div key={i} className="img">
-          <img src={img.src} lazyload />
+          <img src={img.src} lazyload="true" />
           <span>{img.desc}</span>
         </div>
       ))}
@@ -58,11 +58,11 @@ export default ({
                   style={{
                     backgroundImage: `url(${work.images[0] && work.images[0].src})`
                   }}
-                  lazyload
+                  lazyload="true"
                 />
               ) : (
                 <video
-                  lazyload
+                  lazyload="true"
                   src={work.video}
                   onMouseEnter={e => e.target.play()}
                   onMouseLeave={e => {

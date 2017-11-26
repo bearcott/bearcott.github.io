@@ -220,7 +220,7 @@ h3 {
     top: 20px;
     left: 20px;
     box-sizing: border-box;
-    border: 5px solid $pastel-red;
+    border: 5px solid rgba($font-tan, 0.2);
     z-index: -1;
     transition: $ez-transition;
     will-change: opacity;    
@@ -243,7 +243,7 @@ h3 {
       transition: $ez-transition;
     }    
     &.rev {
-      opacity: 0.8 !important;
+      opacity: 0.6 !important;
     }
   }
   >.wrapper {}
@@ -322,6 +322,7 @@ h3 {
       height: 100%;
       border-left: 5px solid;
       transform: rotate(45deg);
+      border-radius: 100%;
       transition: $ez-transition;
     }
     &:before {
@@ -370,7 +371,6 @@ h3 {
   width: 50%;
   float: left;
   padding: 15px;
-  transition: $ez-transition;
   &:nth-child(odd) {
     float: right;
   }
@@ -386,7 +386,7 @@ h3 {
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: $ez-transition;
+  
     }
     .img {
       min-height: 300px;
@@ -408,15 +408,18 @@ h3 {
   .portfolio > .left.snap {
     position: absolute;
   }
+  .header {
+    height: 120vh;
+  }
+  .frame {
+    display: none;
+  }
 }
 
 
 @media (max-width: 700px) {
   .header .dialogue h1 {
     font-size: 20px;
-  }
-  .frame {
-    display: none;
   }
   .portfolio > .right .piece {
     width: 100%;
