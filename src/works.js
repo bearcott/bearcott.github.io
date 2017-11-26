@@ -164,9 +164,9 @@ const WORKS = {
 };
 
 export default [
-  WORKS.legends,
-  WORKS.fivemiles,
   WORKS.hdfw,
+  WORKS.fivemiles,
+  WORKS.legends,
   WORKS.iphone,
   WORKS.earthack,
   WORKS.utdhackers,
