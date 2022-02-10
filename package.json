@@ -16,7 +16,7 @@
   "author": "Benny Yan",
   "homepage": "http://bearcott.com",
   "dependencies": {
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "normalize.css": "^7.0.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
